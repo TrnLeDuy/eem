@@ -1,0 +1,65 @@
+// Generate rgba colors with different opacity levels
+@function generate-rgba($r, $g, $b, $opacity) {
+  @return rgba($r, $g, $b, $opacity);
+}
+
+// Button styles with configurable parameters
+@mixin button-variant($bg-color, $text-color, $border-color, $hover-color, $active-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: $hover-color;
+    border-color: $hover-color;
+  }
+  
+  &:active {
+    background-color: $active-color;
+    border-color: $active-color;
+  }
+}
+
+// Primary button using the button-variant mixin
+@mixin primary-button {
+  @include button-variant(
+    $primary-color,
+    $text-on-primary,
+    $border-primary,
+    $primary-hover,
+    $primary-active
+  );
+}
+
+// Link styles with transition
+@mixin primary-link {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: $primary-hover;
+    text-decoration: underline;
+  }
+}
+
+// Border styles
+@mixin primary-border {
+  border: 1px solid $primary-color;
+}
+
+// Root variables
+:root {
+  // Primary colors
+  --color-primary: #{$primary-color};
+  --color-secondary: #004b87;
+  --color-hover: #0073ce;
+  --text-sec: #2d3239;
+  
+  // Generate rgba variations
+  @for $i from 1 through 9 {
+    --rgba-primary-#{$i}: #{generate-rgba(0, 134, 240, $i * 0.1)};
+  }
+}
+

@@ -1,0 +1,113 @@
+@import "variables";
+@import "./mixins/class";
+@import "./mixins/mixins";
+@import "./mixins/breakpoints";
+@import "./mixins/colors";
+@import "../css/style.css";
+@import "../css/plugins.css";
+@import "../css/templete.css";
+
+// Common elements
+.btn-primary {
+  @include primary-button;
+}
+
+.link-primary {
+  @include primary-link;
+}
+
+// Header styles
+.main-header {
+  background-color: $primary-color;
+  color: $text-on-primary;
+}
+
+// Navigation
+.nav-link {
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-hover;
+  }
+
+  &.active {
+    color: $primary-active;
+    font-weight: bold;
+  }
+}
+
+// Borders and dividers
+.border-primary {
+  @include primary-border;
+}
+
+// Background utilities
+.bg-primary {
+  background-color: $bg-primary;
+  color: $text-on-primary;
+}
+
+.bg-primary-light {
+  background-color: $bg-light;
+}
+
+// Text utilities
+.text-primary {
+  color: $text-primary;
+}
+
+// Font declarations
+@font-face {
+  font-family: "LucidaGrande";
+  src: url("../fonts/LucidaGrande.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LucidaGrande";
+  src: url("../fonts/LucidaGrandeBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  header {
+    height: 0 !important;
+  }
+  font-family: $base-font-regular;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $base-font-regular;
+}
+
+a {
+  text-decoration: unset;
+}
+
+p {
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+select:invalid {
+  color: gray;
+  font-weight: 300;
+}
+
+@import "custom";

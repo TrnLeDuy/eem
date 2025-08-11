@@ -1,0 +1,18 @@
+{
+    "Core": true,
+    "Dashboard": true,
+    "Media": true,
+    "Menu": true,
+    "Page": true,
+    "Setting": true,
+    "Tag": true,
+    "Translation": true,
+    "User": true,
+    "Workshop": true,
+    "Dynamicfield": true,
+    "Slider": true,
+    "Logviewer": true,
+    "Contact": true,
+    "Product": true,
+    "Project": true
+}

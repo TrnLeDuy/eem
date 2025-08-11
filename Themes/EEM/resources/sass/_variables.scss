@@ -1,0 +1,20 @@
+// Main Colors
+$primary-color: #2087B3;
+$primary-light: lighten($primary-color, 10%);  // Phiên bản sáng hơn
+$primary-dark: darken($primary-color, 10%);    // Phiên bản tối hơn
+
+// Color variations
+$primary-hover: $primary-light;
+$primary-active: $primary-dark;
+
+// Text colors
+$text-on-primary: #ffffff;
+$text-primary: $primary-color;
+
+// Border colors
+$border-primary: $primary-color;
+$border-light: $primary-light;
+
+// Background colors
+$bg-primary: $primary-color;
+$bg-light: $primary-light;
